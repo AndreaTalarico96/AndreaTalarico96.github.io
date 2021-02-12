@@ -1,12 +1,430 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AndrewTaylorDeveloper</title>
+    <title>Document</title>
+    
+<div>
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="theme-color" content="#ffffff">
+</div>
+
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <!--<link rel="stylesheet" href="style.css"> -->
+    
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <style>
+        .paddingAdded{
+            margin-top: 80px;
+        }
+        .stick{
+            position:fixed;
+            top:0;            
+            left: 50%;
+        }
+        .decoration{
+            width:100%;
+            border: 3px solid black;
+        }
+        .logo{
+            margin:auto; 
+            width: max-content;
+        }
+        img{
+            height:400px;
+            width:auto;
+            padding:90px 0px;
+            overflow: hidden;
+        }
+        .navbar{
+            position: relative;
+            width: max-content;
+        }
+        .innerNavbar{
+            margin:auto; 
+            width: max-content;
+        }
+        .toggIcon{
+            background-color: white;
+            background-image: url(CCLogoSVG.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            border-radius: 50%;
+        }
+        .columny{
+            flex-direction: column;
+        }
+        h1{
+            font-size: 3rem;
+            padding: 25px 0px 20px 0px;
+        }
+        p{
+            padding-top: 20px;
+        }
+        @media all and (max-width: 800px) {
+            .underNavigator{
+                float:left;
+            }
+            .navigator{
+                background-color: rgb(46, 43, 43);
+                width:100%;
+            }
+        }
+        /*.head{
+            height:auto;
+            width: fit-content;
+            position:relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }*/
+        .imageBg{
+            position:absolute;
+            left: 57%;
+            top: 10%;
+            z-index:-1;
+            height:900px;
+        }
+        .imageBg2{
+            height:750px;
+            width:auto;
+            padding:0px;
+
+            position:absolute;
+            left: -5%;
+            top: 10%;
+            z-index:-1;
+        }
+        .sectionBg{
+            position:relative; 
+            /*height:1000px; 
+            /*background-color: darksalmon; */
+            padding-top: 50px; 
+            z-index: -2;
+        }
+        section{
+            text-align: center;
+            overflow:hidden;
+        }
+        header{
+            background-color: rgb(235, 235, 235);
+        }
+        footer {
+            height:100px; 
+            background-color: rgb(46, 43, 43);
+        }
+        li a {
+            margin: 0px 1px;
+            color:black;
+        }
+        li a:hover{
+            color:white;
+        }
+        .currentPage{
+            background-color: black;
+            line-height: normal;
+            border-radius: 10%;
+            margin: 0px 1px;
+            color: white;
+        }
+        .currentPage:hover{
+            color: black;
+            background-color: white;
+        }
+        .nonDisplayed{
+            display: none;
+        }
+        .articles:last-child{
+            margin-bottom: 100px;
+        }
+        .widest{
+            background-color: rgb(230, 228, 228);
+            width:100%;
+        }
+        .navigator{
+            transition: background-color 1s linear;
+        }
+        .toTopButton{
+            opacity: 0;
+            position:fixed;
+            z-index:10;
+            top: 90%;
+            left:90%;
+            background-color: #000000;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            transition: all 1s;
+            padding: 0 9px 2px 9px;
+            font-size: 2rem;
+        }
+        .toTopButton:hover{
+            text-decoration: underline;
+            background-color: #333333;
+        }
+        .rel{
+            position: relative;
+        }
+        
+    </style>
 </head>
 <body>
-    <p>Hello World</p>
+
+    <header class="rel" style="z-index:2">
+        <div class="decoration"></div>
+    <div class=" head">
+        <div class="logo">
+            <img src="CCLogoSVG.svg" alt="">
+        </div>        
+    </div> 
+    <div class="placeholder">
+        <div class="navigator clearfix">
+            <nav id="navbar" class="container navbar-expand-lg navbar underNavigator">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon toggIcon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav innerNavbar">
+                    <li class="nav-item active">
+                    <a class="nav-link currentPage" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="threeJsSamples.html">threejs samples</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    
+    </header> 
+
+    <section class="container-fluid sectionBg rel" style="z-index:1">
+        <img src="gradientInkspot.svg" alt="" class="imageBg">
+        <img src="gradientInkspot.svg" alt="" class="imageBg2">
+        <div class="imageBg"  style="z-index:-1; background: rgb(2,0,36); width:500px; background: linear-gradient(177deg, rgba(2,0,36,1) 13%, rgba(9,9,121,0.485107421875) 59%, rgba(0,212,255,1) 100%);" ></div>
+        <div class="container articles" style="position: relative; z-index:2;">
+            <h1>Chiron's Cave</h1>
+            <h3>Vi dà il benvenuto!</h3>
+            <p>
+                Chiron's Cave nasce da una visione del mondo in cui la relazione con l'Altro, il dialogo e lo spirito critico sono elementi fondamentali per il benessere e la crescita dell'individuo e della società. È uno spazio aperto, libero e responsabile che pone domande, ascolta risposte e continua nella ricerca. Non offre soluzioni preconfezionate, non ha mete prestabilite: é un lungo e interminabile viaggio da percorrere insieme, lasciandosi toccare da dubbio e meraviglia. Per una vita piú consapevole, ricca e profonda. Carica di senso e valore.  </p>
+                
+    <!--Sembra che il solo modo di rendere responsivo questo video sia cambiare width e height probabilmente via js-->
+                <iframe class="yt" width="560" height="315" src="https://www.youtube.com/embed/UwVNkfCov1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            
+                <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
+                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
+            </p><p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
+                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
+            </p>
+            <img src="firstStar.svg" alt="" style="margin: auto; display:block;">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
+                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
+            </p>
+            <p>                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
+                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
+            </p>
+
+    <!--Molto probabilmente anche la mappa di google ha difficoltà con la responsività-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22304.520264744937!2d9.219687747409532!3d45.669594751901805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786bcba5b48e56b%3A0xdf7d47612d66dca!2s20841%20Carate%20Brianza%20MB!5e0!3m2!1sit!2sit!4v1612178332948!5m2!1sit!2sit" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
+                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
+            </p>
+        </div>
+    </section>
+
+    <div class="toTopButton" id="toTop"><i class="fas fa-arrow-alt-circle-up"></i></div></span> </div>
+
+    <footer class="rel d-flex" style="z-index:2">
+        <div></div>
+        <div></div>
+        <div></div>
+    </footer>
+
+
+    <script src="node_modules\lax.js\lib\lax.min.js"></script>
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
+    <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+
+
+    <script>
+    // Obiettivo: cambiare una classe ad un oggetto quando lo scroll supera un certo elemento del dom
+    //(ScrollY segna il margine superiore dell'area visibile)
+
+    //Quindi se volessi un esempio di navbar che cambia stile una volta che scrollando questa sia uscita dall'area visibile
+    /*
+            0.inizializzo le varie robe, recupero gli elementi del dom che mi servono e li metto in variabili
+            1.Prendo l'altezza della nav bar + la sua posizione(o l'altezza di tutti i componenti sopra di essa)
+            2.Prendo lo scrollY e lo metto in confronto con questa nuova distanza che ho ottenuto
+            3.Inserisco una toggleClass -tipo "active"- e inserisco della logica per determinare quando la classe viene rimossa e quando no.
+    */
+
+
+
+    // 0.INIZIALIZZAZIONE
+    let navBHeight = $("#navbar").outerHeight(true);
+    let upperContent = $(".head");
+    let toTopButton = document.querySelector(".toTopButton");
+    let upcont = document.querySelector(".head");
+
+    //il placeholder permette di non avere sbalzi d'altezza nel passaggio da pos:relative a pos:fixed della navbar; è il parent della nav
+    let placehold = $(".placeholder").outerHeight();
+    document.querySelector(".placeholder").style.height = (placehold+"px");
+    let decoUpperBar= document.querySelector(".decoration");
+    document.querySelector(".navbar").style.transform="translate3d(0px,0px, 10px)";
+
+
+    window.onload = () =>{
+        toTopButton.addEventListener(onclick, ()=>{
+            console.log("ciao");
+        });
+    lax.init();
+
+    //SCROLL TO TOP -- JQUERY
+    $('#toTop').on("click",function(){
+      $('html,body').animate({ scrollTop: 0 }, window.scrollY);
+    });
+
+    lax.addDriver('scrollY', function () {
+        return window.scrollY;
+        }
+    )
+
+    //1 Recuperare le coordinate
+
+    let upperHeight = upperContent.outerHeight(true); //l'altezza della navbar non dovrebbe servire visto che il cambiamento avviene subito prima
+
+    // Aggiungo un elemento di lax.js e creo la logica per attribuire le variabili (che fatica che ho fatto però)  
+        lax.addElements(".navigator", {}, {
+            translateX: [
+            ["elInY", "elCenterY", "elOutY"],
+            [0, 0, 0],  //Valore numerico: Quanto "va a dx" rispetto alla sua posizione nel dom (ovvero quella segnata nel css/html)
+            
+            ],
+        onUpdate: function (driverValues, domElement) {
+            if (window.scrollY > 300)
+            {
+                toTopButton.style.transform="translate3d(0px,0px, 0px)"
+                toTopButton.style.opacity=1;
+            }
+            else
+            {
+                toTopButton.style.transform="translate3d(200px,0px, 0px)"
+
+                toTopButton.style.opacity=0;
+
+            }
+
+            if (screen.width<800){             //equivalente di un media query in css
+            domElement.classList.add('stick');
+
+            decoUpperBar.classList.add('nonDisplayed');
+            domElement.style.transform="translate3d(-50%,0px, 0px)";
+            upcont.style.marginTop=navBHeight+"px";
+            console.log(navBHeight);
+            //upperContent.addClass('paddingAdded');
+            $(".placeholder").addClass('stick');
+            } 
+            else
+            {
+            upcont.style.marginTop="0px";    
+            $(".placeholder").removeClass('stick');
+            decoUpperBar.classList.remove('nonDisplayed');
+
+                if (scrollY > upperHeight) {       
+                domElement.classList.add('stick');
+                domElement.classList.add('widest');
+
+                domElement.style.transform="translate3d(-50%,0px, 0px)";
+                } else {
+                domElement.classList.remove('stick');
+                domElement.classList.remove('widest');
+
+
+                }
+            }
+            
+        }
+        })
+
+        lax.addElements(".imageBg", 
+        {
+        scrollY: {
+            translateY: [
+            ["elInY", "elOutY"],
+            [0, '-screenHeight/2'],  //Valore numerico: Quanto "scende" rispetto alla sua posizione nel dom (ovvero quella segnata nel css/html)
+            {
+                easing: 'easeInOutQuart',
+            }
+            ], 
+            translateX: [
+            ["elInY", "elOutY"],
+            [0, -15],  //Valore numerico: Quanto "va a dx" rispetto alla sua posizione nel dom (ovvero quella segnata nel css/html)
+            {
+                easing: 'easeInOutQuart',
+            }
+            ],
+            rotate: [
+            ["elInY", "elOutY"],  //Con driver=scrollY: la posizione in cui si trova lo scrolling al top di pagina
+            [180, 90],  //Valore numerico: Quanto "ruota sull'asse y" rispetto alla sua posizione nel dom (ovvero quella segnata nel css/html)
+            {
+                easing: 'easeInOutQuart',
+            }
+            ],  
+            opacity: [
+            ["elInY", "elCenterY", "elOutY"],
+            [0, 1, 0],
+            {
+                easing: 'easeInOutCubic'
+            }
+            ], 
+            
+            }
+        }        
+        )
+        lax.addElements(".imageBg2", 
+        {
+        scrollY: {
+            translateY: [
+            ["elInY", "elCenterY", "elOutY"],
+            [0, -40 , 0],  //Valore numerico: Quanto "scende" (in px) rispetto alla sua posizione nel dom (ovvero quella segnata nel css/html)
+            {
+                easing: 'easeInOutQuart',
+            }
+            ],  
+            opacity: [
+            ["elInY", "elCenterY", "elOutY"],
+            [0, 1, 0],
+            {
+                easing: 'easeInOutCubic'
+            }
+            ],  
+            }
+        }        
+        )
+        
+    }
+
+
+    </script>
 </body>
 </html>
