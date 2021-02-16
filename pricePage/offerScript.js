@@ -29,12 +29,14 @@ const services = [
 place = document.getElementById("servicesList");
 
 //Chiamata alla funzione che elabora ed appende
-CreateAndAppendServix(place, services);
+CreateServix(place, services);
 
 //
-function CreateAndAppendServix(place, services){
+function CreateServix(place, services){
+
     for (const serv of services) {
         //console.log(serv.title);
+        //CREAZIONE DELL'ELEMENTO
         let element = document.createElement("div");
         element.innerHTML = 
         `<div class="serviceContainer">
@@ -46,6 +48,11 @@ function CreateAndAppendServix(place, services){
                 <img src="${serv.image}" alt="explicative image">
             </div>
         </div>`;
-        console.log(element);
+        //console.log(element); 
+
+        //APPENDERE L'ELEMENTO
+        place.appendChild(element);
     }
+    
 }
+
