@@ -29,10 +29,10 @@ const services = [
 place = document.getElementById("servicesList");
 
 //Chiamata alla funzione che elabora ed appende
-CreateServix(place, services);
+CreateAndAppendServix(place, services);
 
 //
-function CreateServix(place, services){
+function CreateAndAppendServix(place, services){
 
     for (const serv of services) {
         //console.log(serv.title);
@@ -53,6 +53,6 @@ function CreateServix(place, services){
         //APPENDERE L'ELEMENTO
         place.appendChild(element);
     }
-    
+
 }
 
