@@ -39,7 +39,7 @@ function CreateAndAppendServix(place, services){
         //CREAZIONE DELL'ELEMENTO
         let element = document.createElement("div");
         element.innerHTML = 
-        `<div class="serviceContainer d-flex">
+        `<div class="serviceContainer d-flex flex-row">
             <div class="serviceText">
                 <h1>${serv.title}</h1>
                 <p>${serv.text}</p>
