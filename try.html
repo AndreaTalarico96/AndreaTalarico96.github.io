@@ -5,7 +5,6 @@
 	
 	<script>
 		function getWelcome(){
-				
 			var ajaxRequest = new XMLHttpRequest();
 			ajaxRequest.onreadystatechange = function(){
 			
@@ -14,8 +13,9 @@
 					if(ajaxRequest.status == 200){
 						//turn JSON into object
 						var jsonObj = JSON.parse(ajaxRequest.responseText);
-						
+						Console.log(jsonObj);
 						//get random object from array
+						/*
 						var randomMessagesArray = jsonObj.randomMessages;
 						var randomIndex = Math.floor(Math.random()*randomMessagesArray.length);
 						var messageObj = randomMessagesArray[randomIndex];
@@ -23,6 +23,13 @@
 						//use that object to set content and color
 						document.getElementById("welcome").innerHTML = messageObj.message;
 						document.getElementById("welcome").style.color = messageObj.color;
+						*/
+						var title = jsonObj.randomMessages;
+						var photoUrl = jsonObj.photoUrl;
+
+						//inject in html
+						place = document.getElementById("welcome");
+						InjectFunc(title, photoUrl, place);
 						
 					}
 					else{
@@ -37,6 +44,21 @@
 			}
 			ajaxRequest.open('GET', 'https://andreatalarico96.github.io/tryJson.json');
 			ajaxRequest.send();
+		}
+
+		function InjectFunc(titlo, urlo, place){
+			let element = document.createElement("div");
+        element.innerHTML = 
+        `   <div class="">
+                <h1>${title}</h1>
+            </div>
+            <div class="serviceImage">
+                <img src="${urlo}" alt="explicative image">
+            </div>`;
+        //console.log(element); 
+
+        //APPENDERE L'ELEMENTO
+        place.appendChild(element);
 		}
 	
 	</script>	
