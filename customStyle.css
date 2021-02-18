@@ -1,0 +1,56 @@
+.navStyle{
+    height: 10vh;
+}
+body{
+    background-color: #333;
+    background-image: linear-gradient(rgb(12, 0, 46),rgb(19, 8, 8));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a {
+    color:whitesmoke;
+    height: 100%;
+
+}
+h1{
+    display: inline-block;
+    height: 100%;
+    margin-left: 15px;
+}
+h2{
+    color:whitesmoke;
+}
+.contacts{
+    float: right;
+}
+.carolImageContain{
+    padding: 10px 0;
+    height: 80vh;
+    width: 100vw;
+}
+.carolImage{
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+.footer{
+    height: 10vh;
+    background-color: #333;
+    
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footItem{
+    margin: 10px 20px;
+}
+.secretPageBody{
+    padding: 10px 0;
+    min-height: 80vh;
+    width: 100vw;
+}
+.bodySecret{
+    background-image: linear-gradient(rgb(177, 158, 231),rgb(218, 226, 147));
+
+}
