@@ -24,8 +24,8 @@
 						document.getElementById("welcome").innerHTML = messageObj.message;
 						document.getElementById("welcome").style.color = messageObj.color;
 						*/
-						var title = jsonObj.randomMessages;
-						var photoUrl = jsonObj.photoUrl;
+						var title = jsonObj.randomMessages[0].title;
+						var photoUrl = `https://andreatalarico96.github.io/${jsonObj.randomMessages[0].photoUrl}`;
 
 						//inject in html
 						place = document.getElementById("welcome");
@@ -53,7 +53,7 @@
                 <h1>${titlo}</h1>
             </div>
             <div class="serviceImage">
-                <img src="${urlo}" alt="explicative image">
+                <img src="${urlo}" alt="Doveva essere la volta buona">
             </div>`;
         //console.log(element); 
 
