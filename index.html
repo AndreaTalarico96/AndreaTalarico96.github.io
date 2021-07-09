@@ -44,6 +44,15 @@
             width:auto;
             padding:90px 0px;
             overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .imgsample{
+            height:auto;
+            width:20%;
+            padding:15px;
+            overflow: hidden;
+            border-radius: 0%;
         }
         .navbar{
             position: relative;
@@ -55,7 +64,7 @@
         }
         .toggIcon{
             background-color: white;
-            background-image: url(CCLogoSVG.svg);
+            background-image: url(mults/profile.jpg);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
@@ -79,6 +88,20 @@
                 background-color: rgb(46, 43, 43);
                 width:100%;
             }
+            .imgsample{
+            height:auto;
+            width:80%;
+            padding:15px;
+            overflow: hidden;
+        }
+        h3{
+            font-weight: bold;
+            padding-top: 25px;
+        }
+        h4{
+            padding-top: 15px;
+            color: rgb(139, 0, 0);
+        }
         }
         /*.head{
             height:auto;
@@ -184,7 +207,7 @@
         <div class="decoration"></div>
     <div class=" head">
         <div class="logo">
-            <img src="CCLogoSVG.svg" alt="">
+            <img src="mults/profile.jpg" alt="">
         </div>        
     </div> 
     <div class="placeholder">
@@ -194,22 +217,15 @@
                 <span class="navbar-toggler-icon toggIcon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav innerNavbar">
-                    <li class="nav-item active">
-                    <a class="nav-link currentPage" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>                    
+                <ul class="navbar-nav innerNavbar">                
                     <li class="nav-item">
-                        <a class="nav-link" href="pricePage/whatweoffer.html">Our services</a>
+                        <a class="nav-link" href="#sectA">Mobile casual games</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="landingpage\index.html">Extended template example</a>
+                    <a class="nav-link" href="#sectB">Frame-based animations</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="try.html">AjaxTrials</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="poligono_13.pdf" download="">Download</a>
-
+                    <a class="nav-link" href="#sectC">Unity animations prototypes</a>
                     </li>
                 </ul>
                 </div>
@@ -220,40 +236,85 @@
     </header> 
 
     <section class="container-fluid sectionBg rel" style="z-index:1">
-        <img src="gradientInkspot.svg" alt="" class="imageBg">
-        <img src="gradientInkspot.svg" alt="" class="imageBg2">
-        <div class="imageBg"  style="z-index:-1; background: rgb(2,0,36); width:500px; background: linear-gradient(177deg, rgba(2,0,36,1) 13%, rgba(9,9,121,0.485107421875) 59%, rgba(0,212,255,1) 100%);" ></div>
+        
         <div class="container articles" style="position: relative; z-index:2;">
-            <h1>Chiron's Cave</h1>
-            <h3>Vi dà il benvenuto!</h3>
+            <h1>Andrea Talarico's Personal Portfolio</h1>
+            <h2>Hi! I am Andrea <br> I develop games and websites in Monza, Italy</h2>
             <p>
-                Chiron's Cave nasce da una visione del mondo in cui la relazione con l'Altro, il dialogo e lo spirito critico sono elementi fondamentali per il benessere e la crescita dell'individuo e della società. È uno spazio aperto, libero e responsabile che pone domande, ascolta risposte e continua nella ricerca. Non offre soluzioni preconfezionate, non ha mete prestabilite: é un lungo e interminabile viaggio da percorrere insieme, lasciandosi toccare da dubbio e meraviglia. Per una vita piú consapevole, ricca e profonda. Carica di senso e valore.  </p>
+                I started to grow passionate about Unity and web developing after graduating in philosophy.</p>
+                <p> From 2018 on I'm working as a freelance and keep prototyping and thinking about videogames and tabletop games.</p>
                 
     <!--Sembra che il solo modo di rendere responsivo questo video sia cambiare width e height probabilmente via js-->
-                <iframe class="yt" width="560" height="315" src="https://www.youtube.com/embed/UwVNkfCov1k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+                
+            <h3 id="sectA">Mobile Casual Games</h3>
+            <p>All of them have been commissioned by private clients and are not available on the app stores</p>
             
-                <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
-                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
-            </p><p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
-                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
-            </p>
-            <img src="firstStar.svg" alt="" style="margin: auto; display:block;">
+            <h4>Catch the kiss Game</h4>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
-                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
+            The core of the game is to catch kisses from the girl by tapping on them trying to avoid loudy raspberries that lower your score. <br> 
+            The girl consists of a single sprite moved by an animator from right to left and reverse.  
             </p>
-            <p>                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
-                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
+            <img class="imgsample" src="mults/Kiss1.jpeg" alt="" style="margin: auto; ">
+            <img class="imgsample" src="mults/Kiss2.jpeg" alt="" style="margin: auto; ">
+            <img class="imgsample" src="mults/Kiss3.jpeg" alt="" style="margin: auto;">
+
+            <h4>The school of Dance Game</h4>
+            <p>
+            The core of the game is to understand the position of the dancer and swipe your finger in the right direction as fast as you can in the limit time. <br> 
+            The dancer is made up by a set of different frames animated by finger's input through Unity built-in animator.  
+            </p>
+            <img class="imgsample" src="mults/patino1.jpeg" alt="">
+            <img class="imgsample" src="mults/patino2.jpeg" alt="">
+            <img class="imgsample" src="mults/patino3.jpeg" alt="">
+
+            <h3 id="sectB">Frame-based animation prototypes</h3>
+            <p>These are part of games in building or demos, and are created using Krita or/and Photoshop</p>
+            
+            <h4>The dungeon game monster</h4>
+            <p>
+            This is the creation of a floating monster in a top-down 2D dungeon game. <br> 
+            It is based on the creation of multiple frames that gives the appearance of a moving tail.  
+            </p>
+            <p>
+                <video width="576" height="432" controls>
+                    <source src="mults/Monster.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> 
             </p>
 
-    <!--Molto probabilmente anche la mappa di google ha difficoltà con la responsività-->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22304.520264744937!2d9.219687747409532!3d45.669594751901805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786bcba5b48e56b%3A0xdf7d47612d66dca!2s20841%20Carate%20Brianza%20MB!5e0!3m2!1sit!2sit!4v1612178332948!5m2!1sit!2sit" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe><p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laudantium cupiditate quas distinctio qui, 
-                doloribus similique nostrum magni sequi ducimus quo fuga repellendus ipsam commodi nam culpa libero rem omnis.
+            <h4>The casual game frog </h4>
+            <p>
+            This is the functioning of a set of frames that interacts with a custom touch input system.<br> 
+            Also based on a set of frames that are animated on the input through Unity's animator.  
             </p>
+            <p>
+                <video width="576" height="432" controls>
+                    <source src="mults/frog.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> 
+            </p>
+
+            <h3 id="sectC">Unity Animation prototypes</h3>
+            <p>This is one of my last prototypes</p>
+            
+            <h4>The puncher animation</h4>
+            <p>
+            This puncher is made using Unity 2D animation package and hierarchy positioning and link of different sprites <br> 
+            It also grants the opportunity to attach collider components on the single sprites gameObjects.
+            </p>
+            <p>
+                <video width="576" height="432" controls>
+                    <source src="mults/Puncher.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video> 
+            </p>
+            
+            <h3>Contacts</h3>
+            <p>Andrea Talarico <br>
+            To contact me use this email address: <br>
+        tala.acd@gmail.com
+    <br><br>
+Thanks for the attention :-)</p>
         </div>
     </section>
 
@@ -283,28 +344,7 @@
             3.Inserisco una toggleClass -tipo "active"- e inserisco della logica per determinare quando la classe viene rimossa e quando no.
     */
 
-    $(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".nav-item, footer a[href='#myPage']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
+    
 
     // 0.INIZIALIZZAZIONE
     let navBHeight = $("#navbar").outerHeight(true);
@@ -450,7 +490,7 @@
         
     }
 
-    })
+    
     </script>
 </body>
 </html>
